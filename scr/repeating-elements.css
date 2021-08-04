@@ -1,0 +1,109 @@
+/*Navigation Bar and Footer*/
+
+/*
+Dependencies From Other Websites:
+	Google Fonts: fonts.google.com
+		-import of Nunito style
+*/
+
+/*
+The following ONLY applies to live uploads to the website server:
+
+Must change title of this document in order to commit changes that are made 
+within this css document AND you MUST also manually change the appropriate 
+html href link title to the new css document title in all html documents that 
+link to this css document. This link will be found in the <head> at the top of 
+each html document.
+
+This will cause all browsers to load your new css changes instead of loading previous css 
+code saved in clients' browser history (cache). 
+
+The easiest way to update the css title is to update the current version of the css file. 
+Ex: title change from "repeating-elements-version2" to "repeating-elements-version3" 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@media screen and (max-width: 1210px){
+	a.navLink{
+		font-size: 23px;
+		padding-right: 20px
+	}
+	div.projectsDropdownBox{
+		margin-left: 370px
+	}
+}
+
+header{
+	height: 115px;
+	background-image: linear-gradient(to right, rgba(255, 255, 255) 200px, rgba(129, 203, 140) 200px)
+}
+
+nav{
+	margin: 0px 38px;
+	white-space: nowrap
+}
+
+a{
+	text-decoration: none
+}
+
+.navLink{
+	color: #ffffff;
+	font-family: Verdana;
+	font-size: 30px;
+	position: relative;
+	top: -45px;
+	left: 80px;
+	padding-right: 75px
+}
+
+.navLink:hover{
+	color: #FBE3CF
+}
+
+.projectsDropdownBox{
+	position: relative;
+	height: 300px;
+	width: 180px;
+	margin-top: -35px;
+	margin-left: 545px;
+	border-radius: 20px;
+	border: 1px solid #FBE3CF;
+	background-color: #F67F20;
+	font-family: Nunito;
+	text-align: center;
+	display: none;
+	z-index: 1
+}
+
+a.dropdownLink{
+	display: inline-block;
+	margin-top: 10px;
+	color: #FFFFFF
+}
+
+.dropdownLink:hover{
+	text-decoration: underline;
+	color: #FBE3CF
+}
+
+#projectsLink{
+	padding-bottom: 10px;
+}
+
+#projectsLink:hover ~ #projectsDropdownBox, #projectsDropdownBox:hover{
+		display: block
+}
+
+#donateLink{
+	padding: 10px;
+	border: 4px;
+	border-style: solid;
+	border-color: #F67F20
+}
+
+#donateLink:hover{
+	color: #FFFFFF;
+	background-color: #F67F20
+}
