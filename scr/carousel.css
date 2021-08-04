@@ -1,0 +1,35 @@
+.carousel{
+	text-align : center;
+	perspective: 8000px;
+	margin-top: 100px;
+}
+
+.projects{
+	transform-style: preserve-3d;
+	height: 300px;
+	transform-origin: 50% 50% -500px;
+	transition: 1s
+}
+
+.projectImage{
+	max-height: 600px; 
+	width: 35%;
+	margin-left: 40px;
+	border-radius: 20px;
+	position: absolute;
+	left: 30%;
+	transform-origin: 50% 50% -500px;
+	outline: 1px solid transparent
+}
+
+#projectImage1{transform: rotateY(0deg);}
+#projectImage2{transform: rotateY(40deg) translateX(10px)}
+#projectImage3{transform: rotateY(80deg) translateX(200px)}
+#projectImage4{transform: rotateY(120deg) translateX(-10px)}
+#projectImage5{transform: rotateY(160deg) translateX(-5px)}
+#projectImage6{transform: rotateY(200deg) translateX(5px)}
+#projectImage7{transform: rotateY(240deg) translateX(-10px)}
+#projectImage8{transform: rotateY(280deg) translateX(-100px)}
+#projectImage9{transform: rotateY(320deg) translateX(-10px)}
+
+

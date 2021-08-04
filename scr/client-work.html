@@ -1,0 +1,124 @@
+<!--Home Page-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>ReRoot Pontiac</title>
+	<meta charset = "utf-8">
+	<link rel = "icon" href = "../images/logo.png" type = "image/x-icon">
+	<!--Must change title of css file name below (href = "file-name.css") when changing css file title-->
+	<link href = "repeating-elements.css" rel = "stylesheet" type ="text/css">
+	<link href = "slideshow.css" rel = "stylesheet" type ="text/css">
+	<link href = "carousel.css" rel = "stylesheet" type = "text/css">
+</head>
+<body>
+	<style>
+		/*
+		-------------------------------------------------------------------------------------------------------------------
+		Background Image Advice:
+		"The best website background image size is 1920 x 1080 pixels, 
+		according to Malama Online Marketing, and the ideal ratio is 16:9. 
+		The dpi (dots per inch) should be at least 72, 
+		yet you still want to keep the file size as small as possible to minimize site load times."
+		
+			Camryn Rabideau. “Tips for Choosing a Website Background Image Size” WordPress, 
+		AUGUST 18, 2018, https://wordpress.com/go/design/choose-website-background-image/. 
+		Accessed 2 Jul. 2021.
+		
+		Note: Some large images or images with large aspect ratios may display improperly or not at all.
+		-------------------------------------------------------------------------------------------------------------------
+		Current Background Image: 1280 x 1764 pixels, 320 : 441 aspect ratio (portrait), 72 dpi
+		Date of upload: 7/04/2021
+		
+			Mittermeier, Felix. "Photo Of Old Tree." January 02, 2019. Pexels, 
+		https://www.pexels.com/photo/photo-of-old-tree-1792626/. Accessed July 04, 2021.
+		-------------------------------------------------------------------------------------------------------------------
+		*/
+		body{
+			background-image: linear-gradient(rgba(255, 255, 255, 0.80) 1000px, rgba(129, 203, 140, 0.80) 1000px 1500px, 
+										  rgba(255, 255, 255, 0.8) 1500px 2000px, rgba(68, 38, 31, 0.8) 2000px), 
+										  url('../images/tree_background_medium.jpg'); 
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			min-height: 100vh;
+			min-width: 100vw;
+			overflow-x: hidden;
+			margin: 0
+		}
+	</style>
+	<header>
+		<nav>
+			<!--Logo and Menu Items-->
+			<a href = "client-work.html">
+				<img src = "../images/logo.png" alt = "ReRoot Pontiac" id = "logo" width = "110" height = "110">
+			</a>
+				<a href = "client-work.html" class = "navLink" style = "text-decoration: underline">Home</a>  
+				<a href = "https://www.rerootpontiac.org/index.php/elementor-104/" class = "navLink">About Us</a>  
+				<a href = "" class = "navLink" id = "projectsLink">Projects</a> 
+				<a href = "https://www.rerootpontiac.org/index.php/susta/" class = "navLink">Opportunities</a>
+				<a href = "" class = "navLink">Contact Us</a>
+				<a href = "https://donorbox.org/rerootpontiac" class = "navLink" id = "donateLink">Donate
+			</a>
+			<!--Project Dropdown Menu-->
+			<div class = "projectsDropdownBox" id = "projectsDropdownBox">
+				<a href = "" class = "dropdownLink">Aquaponics</a> <br>
+				<a href = "" class = "dropdownLink">Beekeeping</a> <br>
+				<a href = "https://www.rerootpontiac.org/index.php/biofiltration-area/" class = "dropdownLink">Biofiltration Area</a> <br>
+				<a href = "" class = "dropdownLink">Chickens</a> <br>
+				<a href = "https://www.rerootpontiac.org/index.php/community-gardens/" class = "dropdownLink">Community Gardens</a> <br>
+				<a href = "" class = "dropdownLink">Microgreens</a>  <br> 
+				<a href = "" class = "dropdownLink">Mushrooms</a> <br> 
+				<a href = "https://www.rerootpontiac.org/index.php/orchards/" class = "dropdownLink">Orchards</a> <br>
+				<a href = "https://www.rerootpontiac.org/index.php/willow-structure/" class = "dropdownLink">Willow Structure</a>
+			</div>
+		</nav>
+	</header>
+	<!--Slideshow-->
+	<div class = "slideshow">
+		<div class = "slide">
+			<img src = "../images/slideshow image 1.jpg" class = "slideImage">
+			<div class= "text" id = "quotation">Developing Interest In Awesome</div>
+			<div class= "text" id = "callToDonate">Donate Today!</div>
+		</div>
+		<div class = "slide">
+			<img src = "../images/slideshow image 2.jpg" class = "slideImage">
+			<div class= "text" id = "quotation">Exploring Innovations In Sustainability</div>
+		</div>
+		<div class = "slide">
+			<img src = "../images/slideshow image 3.jpg" class = "slideImage">
+			<div class= "text" id = "quotation">Help Give Back To The Community</div>
+		</div>
+		<div class = "slide">
+			<img src = "../images/slideshow image 4.jpg" class = "slideImage">
+			<div class= "text" id = "quotation">Symbiotic Environmental Projects</div>
+		</div>
+		<a class = "previousArrow" onclick = "plusSlides(-1)">&#10094;</a>
+		<a class = "nextArrow" onclick = "plusSlides(1)">&#10095;</a>
+		<br>
+		<div class = "slideDots" style = "text-align : center">
+			<span class = "dot" onclick = "currentSlide(1)"></span>
+			<span class = "dot" onclick = "currentSlide(2)"></span>
+			<span class = "dot" onclick = "currentSlide(3)"></span>
+			<span class = "dot" onclick = "currentSlide(4)"></span>
+		</div>
+	</div>
+	<!--Project Carousel-->
+	<div class = "carousel">
+	<h1 style = "font-family: Verdana">Projects</h1>
+		<div class = "projects">
+			<img src = "../images/carousel-aquaponics.jpg" class = "projectImage" id = "projectImage1">
+			<img src = "../images/carousel-beekeeping.jpg" class = "projectImage" id = "projectImage2">
+			<img src = "../images/carousel-biofiltration.jpg" class = "projectImage" id = "projectImage3">
+			<img src = "../images/carousel-chickens.jpg" class = "projectImage" id = "projectImage4">
+			<img src = "../images/carousel-community-gardens.jpg" class = "projectImage" id = "projectImage5">
+			<img src = "../images/carousel-microgreens.jpg" class = "projectImage" id = "projectImage6">
+			<img src = "../images/carousel-mushrooms.jpg" class = "projectImage" id = "projectImage7">
+			<img src = "../images/carousel-orchards.jpg" class = "projectImage" id = "projectImage8">
+			<img src = "../images/carousel-willow.jpg" class = "projectImage" id = "projectImage9">
+		</div>
+		<button id = "previousButton">&#10094;</button>
+		<button id = "nextButton">&#10095;</button>
+	</div>
+	<script src="slideshow.js"></script>
+</body>
+</html>
