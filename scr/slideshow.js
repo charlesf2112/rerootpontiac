@@ -17,21 +17,23 @@ Ex: title change from "slideshow-version2" to "slideshow-version3"
 */
 
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides();
 
-function showSlides(n) {
+function showSlides() {
 	var i;
 	var slides = document.getElementsByClassName("slide"); /*array of slides*/
 	var dots = document.getElementsByClassName("dot"); /*array of dots*/
 	
 	/*checks for looping slides*/
-	if (n > slides.length){slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
+	if (slideIndex > slides.length){slideIndex = 1}
+	if (slideIndex < 1) {slideIndex = slides.length}
+	
 	
 	/*hide all slides then show relevant slide*/
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
+	
 	if (slideIndex > slides.length) {slideIndex = 1;}
 	slides[slideIndex-1].style.display = "flex";
 	
@@ -39,7 +41,9 @@ function showSlides(n) {
 	for (i = 0; i < dots.length; i++) {
 		dots[i].style.backgroundColor = "rgba(218, 218, 218, 0.85)";
 	}
-	dots[slideIndex-1].style.backgroundColor = "white";
+	dots[slideIndex - 1].style.backgroundColor = "white";
+	
+	setTimeout(function() {slideIndex++;showSlides();}, 5000); 
 }
 
 /*called when clicking arrows*/
