@@ -17,7 +17,7 @@ Ex: title change from "slideshow-version2" to "slideshow-version3"
 */
 
 var slideIndex = 1;
-showSlides();
+showSlides(slideIndex);
 
 function showSlides() {
 	var i;
@@ -43,16 +43,20 @@ function showSlides() {
 	}
 	dots[slideIndex - 1].style.backgroundColor = "white";
 	
-	setTimeout(function() {slideIndex++;showSlides();}, 5000); 
+	timer = setTimeout(function() {slideIndex++;showSlides();}, 5000); 
 }
 
 /*called when clicking arrows*/
 function plusSlides(n) {
-	showSlides(slideIndex += n);
+	clearTimeout(timer)
+	slideIndex += n
+	showSlides();
 }
 
 /*called when clicking dots*/
 function currentSlide(n) {
-	showSlides(slideIndex = n);
+	clearTimeout(timer);
+	slideIndex = n
+	showSlides();
 }
 
