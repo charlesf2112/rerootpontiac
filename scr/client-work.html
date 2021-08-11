@@ -34,8 +34,8 @@
 		-------------------------------------------------------------------------------------------------------------------
 		*/
 		body{
-			background-image: linear-gradient(rgba(255, 255, 255, 0.80) 1000px, rgba(129, 203, 140, 0.80) 1000px 1500px, 
-										  rgba(255, 255, 255, 0.8) 1500px 2000px, rgba(68, 38, 31, 0.8) 2000px), 
+			background-image: linear-gradient(rgba(255, 255, 255, 0.80) 1750px, rgba(129, 203, 140, 0.80) 1750px 2500px, 
+										  rgba(255, 255, 255, 0.8) 2500px 3000px, rgba(68, 38, 31, 0.8) 3000px), 
 										  url('../images/tree_background_medium.jpg'); 
 			background-repeat: no-repeat;
 			background-position: center top;
@@ -57,8 +57,25 @@
 				<a href = "" class = "navLink" id = "projectsLink">Projects</a> 
 				<a href = "https://www.rerootpontiac.org/index.php/susta/" class = "navLink">Opportunities</a>
 				<a href = "" class = "navLink">Contact Us</a>
-				<a href = "https://donorbox.org/rerootpontiac" class = "navLink" id = "donateLink">Donate
-			</a>
+				<a href = "https://donorbox.org/rerootpontiac" class = "navLink" id = "donateLink">Donate</a>
+				<a href = "https://www.facebook.com/RealRerootPontiac/">
+					<img src = "../images/facebook-white.png" class = "navLink socialMedia" id = "facebook" width = "50" height = "50">
+				</a>
+				<a href = "https://twitter.com/rerootpontiac">
+					<img src = "../images/twitter-white.png" class = "navLink socialMedia" width = "50" height = "50">
+				</a>
+				<a href = "https://www.instagram.com/realrerootpontiac/?hl=en">
+					<img src = "../images/instagram-white.png" class = "navLink socialMedia" width = "50" height = "50">
+				</a>
+				<a href = "https://www.tiktok.com/@reroot_pontiac?lang=en">
+					<img src = "../images/tiktok-white.png" class = "navLink socialMedia" width = "50" height = "50">
+				</a>
+				<a href = "https://www.youtube.com/channel/UCAvhTHNqkeybG20iPF28sfg">
+					<img src = "../images/youtube-white.png" class = "navLink socialMedia" width = "50" height = "50">
+				</a>
+				<a href = "https://www.linkedin.com/company/official-reroot-pontiac">
+					<img src = "../images/linkedin-white.png" class = "navLink socialMedia" width = "50" height = "50">
+				</a>
 			<!--Project Dropdown Menu-->
 			<div class = "projectsDropdownBox" id = "projectsDropdownBox">
 				<a href = "" class = "dropdownLink">Aquaponics</a> <br>
@@ -76,20 +93,20 @@
 	<!--Slideshow-->
 	<div class = "slideshow">
 		<div class = "slide">
-			<img src = "../images/slideshow image 1.jpg" class = "slideImage">
+			<img src = "../images/slideshow-image-1.2.jpg" class = "slideImage">
 			<div class= "text" id = "quotation">Developing Interest In Awesome</div>
 			<div class= "text" id = "callToDonate">Donate Today!</div>
 		</div>
 		<div class = "slide">
-			<img src = "../images/slideshow image 2.jpg" class = "slideImage">
+			<img src = "../images/slideshow-image-2.2.jpg" class = "slideImage">
 			<div class= "text" id = "quotation">Exploring Innovations In Sustainability</div>
 		</div>
 		<div class = "slide">
-			<img src = "../images/slideshow image 3.jpg" class = "slideImage">
+			<img src = "../images/slideshow-image-3.2.jpg" class = "slideImage">
 			<div class= "text" id = "quotation">Help Give Back To The Community</div>
 		</div>
 		<div class = "slide">
-			<img src = "../images/slideshow image 4.jpg" class = "slideImage">
+			<img src = "../images/slideshow-image-4.2.jpg" class = "slideImage">
 			<div class= "text" id = "quotation">Symbiotic Environmental Projects</div>
 		</div>
 		<a class = "previousArrow" onclick = "plusSlides(-1)">&#10094;</a>
@@ -104,21 +121,23 @@
 	</div>
 	<!--Project Carousel-->
 	<div class = "carousel">
-	<h1 style = "font-family: Verdana">Projects</h1>
+		<h1 id = "carouselTitle">Our Projects</h1>
 		<div class = "projects">
 			<img src = "../images/carousel-aquaponics.jpg" class = "projectImage" id = "projectImage1">
 			<img src = "../images/carousel-beekeeping.jpg" class = "projectImage" id = "projectImage2">
-			<img src = "../images/carousel-biofiltration.jpg" class = "projectImage" id = "projectImage3">
-			<img src = "../images/carousel-chickens.jpg" class = "projectImage" id = "projectImage4">
-			<img src = "../images/carousel-community-gardens.jpg" class = "projectImage" id = "projectImage5">
+			<img src = "../images/carousel-biofiltration-2.jpg" class = "projectImage" id = "projectImage3">
+			<img src = "../images/carousel-chickens-2.jpg" class = "projectImage" id = "projectImage4">
+			<img src = "../images/carousel-community-gardens-2.jpg" class = "projectImage" id = "projectImage5">
 			<img src = "../images/carousel-microgreens.jpg" class = "projectImage" id = "projectImage6">
 			<img src = "../images/carousel-mushrooms.jpg" class = "projectImage" id = "projectImage7">
-			<img src = "../images/carousel-orchards.jpg" class = "projectImage" id = "projectImage8">
+			<img src = "../images/carousel-orchards-2.jpg" class = "projectImage" id = "projectImage8">
 			<img src = "../images/carousel-willow.jpg" class = "projectImage" id = "projectImage9">
 		</div>
-		<button id = "previousButton">&#10094;</button>
-		<button id = "nextButton">&#10095;</button>
+		<button class = "carouselButton" id = "previousButton" onclick = "carouselSpin('-')">&#10094;</button>
+		<button class = "carouselButton" id = "nextButton" onclick = "carouselSpin('')">&#10095;</button>
 	</div>
+	<img src = "../images/carousel-microgreens.jpg" style = "height: 50px; width: 50px; padding-top: 600px; position relative">
 	<script src="slideshow.js"></script>
+	<script src="carousel.js"></script>
 </body>
 </html>
