@@ -62,6 +62,15 @@ a{
 	color: #FBE3CF
 }
 
+.socialMedia{
+	top: -30px;
+	padding-right: 0
+}
+
+#facebook{
+	padding-left: 42px
+}
+
 .projectsDropdownBox{
 	position: relative;
 	height: 300px;
