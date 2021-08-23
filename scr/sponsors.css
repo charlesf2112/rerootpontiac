@@ -1,0 +1,30 @@
+.sponsorLogos{
+	position: relative;
+	height: 800px;
+	margin-top: 350px;
+	/*margin-bottom: 95px;*/
+	text-align: center
+}
+
+.sponsorThankYou{
+	position: relative;
+	bottom: 65px;
+	color: white;
+	font-family: Verdana;
+	font-size: 60px;
+	text-shadow: 1px 1px 2px #44261fff
+}
+
+.sponsorName{
+	position: relative;
+	top: 80px;
+	left: -198px;
+	color: white;
+	font-family: Nunito;
+	font-size: 20px;
+	font-weight: bold
+}
+
+#logo5, #logo6{
+	margin-top: 150px
+}
