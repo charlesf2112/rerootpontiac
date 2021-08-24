@@ -1,0 +1,39 @@
+#eventsTitle{
+	position: relative;
+	margin-top: 470px;
+	margin-left: 860px;
+	font-family: Verdana;
+	font-size: 60px;
+	color: white;
+	text-shadow: 1px 1px 2px #44261fff
+}
+
+#eventsCalendar{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	margin-top: -125px;
+	margin-left: 1610px;
+	background-color: white;
+	border: 5px solid #595959;
+	cursor: pointer
+}
+
+.events{
+	display: flex;
+	margin-top: 100px
+}
+
+.eventImage{
+	position: relative;
+	height: 400px;
+	width: 450px;
+	margin-right: 75px;
+	background-color: #b7b7b7ff;
+	border: 5px solid white;
+	cursor: pointer
+}
+
+#firstEvent{
+	margin-left: 200px
+}

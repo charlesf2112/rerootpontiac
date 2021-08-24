@@ -70,7 +70,8 @@ Ex: title change from "slideshow-version2" to "slideshow-version3"
 	padding: 8px 12px;
 	position: absolute;
 	width: 100%;
-	text-align: center
+	text-align: center;
+	cursor: default
 }
 
 #quotation{
@@ -85,7 +86,8 @@ Ex: title change from "slideshow-version2" to "slideshow-version3"
 	font-weight: bold;
 	text-shadow: 1px 1px 2px #44261fff, 0 0 15px #f67f20, 0 0 5px #f67f20;
 	bottom: 70px;
-	left: 20%
+	left: 20%;
+	cursor: pointer
 }
 .slideDots{
 	margin: 0; 

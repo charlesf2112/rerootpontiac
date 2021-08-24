@@ -9,8 +9,12 @@
 	<link href = "repeating-elements.css" rel = "stylesheet" type ="text/css">
 	<link href = "slideshow.css" rel = "stylesheet" type ="text/css">
 	<link href = "carousel.css" rel = "stylesheet" type = "text/css">
+	<link href = "events.css" rel = "stylesheet" type = "text/css">
+	<link href = "donation-box.css" rel = "stylesheet" type = "text/css">
+	<link href = "sponsors.css" rel = "stylesheet" type = "text/css">
 </head>
 <body>
+	<!--Background Image-->
 	<style>
 		/*
 		-------------------------------------------------------------------------------------------------------------------
@@ -34,8 +38,8 @@
 		-------------------------------------------------------------------------------------------------------------------
 		*/
 		body{
-			background-image: linear-gradient(rgba(255, 255, 255, 0.80) 1750px, rgba(129, 203, 140, 0.80) 1750px 2500px, 
-										  rgba(255, 255, 255, 0.8) 2500px 3000px, rgba(68, 38, 31, 0.8) 3000px), 
+			background-image: linear-gradient(rgba(255, 255, 255, 0.80) 1850px, rgba(129, 203, 140, 0.80) 1850px 2700px, 
+										  rgba(255, 255, 255, 0.8) 2700px 3550px, rgba(68, 38, 31, 0.8) 3550px 4000px), 
 										  url('../images/tree_background_medium.jpg'); 
 			background-repeat: no-repeat;
 			background-position: center top;
@@ -54,48 +58,88 @@
 			</a>
 				<a href = "client-work.html" class = "navLink" style = "text-decoration: underline">Home</a>  
 				<a href = "https://www.rerootpontiac.org/index.php/elementor-104/" class = "navLink">About Us</a>  
-				<a href = "" class = "navLink" id = "projectsLink">Projects</a> 
+				<a class = "navLink" id = "projectsLink" style = "cursor: pointer">Projects</a> 
 				<a href = "https://www.rerootpontiac.org/index.php/susta/" class = "navLink">Opportunities</a>
-				<a href = "" class = "navLink">Contact Us</a>
+				<a class = "navLink" id = "contactLink" style = "cursor: pointer">Contact Us</a>
 				<a href = "https://donorbox.org/rerootpontiac" class = "navLink" id = "donateLink">Donate</a>
+				
+				<!--Social Media Links-->
 				<a href = "https://www.facebook.com/RealRerootPontiac/">
-					<img src = "../images/facebook-white.png" class = "navLink socialMedia" id = "facebook" width = "50" height = "50">
+					<img src = "../images/facebook-white.png" 
+						onmouseover = "this.src = '../images/facebook-light-orange.png';"
+						onmouseout = "this.src = '../images/facebook-white.png';"
+						class = "navLink socialMedia" id = "facebook" width = "50" height = "50">
 				</a>
 				<a href = "https://twitter.com/rerootpontiac">
-					<img src = "../images/twitter-white.png" class = "navLink socialMedia" width = "50" height = "50">
+					<img src = "../images/twitter-white.png" 
+						onmouseover = "this.src = '../images/twitter-light-orange.png';"
+						onmouseout = "this.src = '../images/twitter-white.png';"
+						class = "navLink socialMedia" width = "50" height = "50">
 				</a>
 				<a href = "https://www.instagram.com/realrerootpontiac/?hl=en">
-					<img src = "../images/instagram-white.png" class = "navLink socialMedia" width = "50" height = "50">
+					<img src = "../images/instagram-white.png" 
+						onmouseover = "this.src = '../images/instagram-light-orange.png';"
+						onmouseout = "this.src = '../images/instagram-white.png';"
+						class = "navLink socialMedia" width = "50" height = "50">
 				</a>
 				<a href = "https://www.tiktok.com/@reroot_pontiac?lang=en">
-					<img src = "../images/tiktok-white.png" class = "navLink socialMedia" width = "50" height = "50">
+					<img src = "../images/tiktok-white.png" 
+						onmouseover = "this.src = '../images/tiktok-light-orange.png';"
+						onmouseout = "this.src = '../images/tiktok-white.png';"
+						class = "navLink socialMedia" id = "tiktok" width = "63" height = "63">
 				</a>
 				<a href = "https://www.youtube.com/channel/UCAvhTHNqkeybG20iPF28sfg">
-					<img src = "../images/youtube-white.png" class = "navLink socialMedia" width = "50" height = "50">
+					<img src = "../images/youtube-white.png" 
+						onmouseover = "this.src = '../images/youtube-light-orange.png';"
+						onmouseout = "this.src = '../images/youtube-white.png';"
+						class = "navLink socialMedia" id = "youtube" width = "50" height = "50">
 				</a>
 				<a href = "https://www.linkedin.com/company/official-reroot-pontiac">
-					<img src = "../images/linkedin-white.png" class = "navLink socialMedia" width = "50" height = "50">
+					<img src = "../images/linkedin-white.png" 
+						onmouseover = "this.src = '../images/linkedin-light-orange.png';"
+						onmouseout = "this.src = '../images/linkedin-white.png';"
+						class = "navLink socialMedia" id = "linkedin" width = "50" height = "50">
 				</a>
+				
 			<!--Project Dropdown Menu-->
 			<div class = "projectsDropdownBox" id = "projectsDropdownBox">
-				<a href = "" class = "dropdownLink">Aquaponics</a> <br>
-				<a href = "" class = "dropdownLink">Beekeeping</a> <br>
+				<a class = "dropdownLink" onclick = "openProjectsPopup()" style = "cursor: default">Aquaponics</a> <br>
+				<a class = "dropdownLink" onclick = "openProjectsPopup()" style = "cursor: default">Beekeeping</a> <br>
 				<a href = "https://www.rerootpontiac.org/index.php/biofiltration-area/" class = "dropdownLink">Biofiltration Area</a> <br>
-				<a href = "" class = "dropdownLink">Chickens</a> <br>
+				<a class = "dropdownLink" onclick = "openProjectsPopup()" style = "cursor: default">Chickens</a> <br>
 				<a href = "https://www.rerootpontiac.org/index.php/community-gardens/" class = "dropdownLink">Community Gardens</a> <br>
-				<a href = "" class = "dropdownLink">Microgreens</a>  <br> 
-				<a href = "" class = "dropdownLink">Mushrooms</a> <br> 
+				<a class = "dropdownLink" onclick = "openProjectsPopup()" style = "cursor: default">Microgreens</a>  <br> 
+				<a class = "dropdownLink" onclick = "openProjectsPopup()" style = "cursor: default">Mushrooms</a> <br> 
 				<a href = "https://www.rerootpontiac.org/index.php/orchards/" class = "dropdownLink">Orchards</a> <br>
 				<a href = "https://www.rerootpontiac.org/index.php/willow-structure/" class = "dropdownLink">Willow Structure</a>
 			</div>
 		</nav>
 	</header>
+	
+	<!--PopUps-->
+	<div class = "popup" id = "contactPopup">
+		<div class = "popupContent">
+			<span class = "close" onclick = "closePopup()">&times;</span>
+			<p class = "contactPopupText">Please Email Us At <br>
+			<a href = "mailto: info@rerootpontiac.org" class = email>info@rerootpontiac.org</a> 
+			<br><br> We Can't Wait to Hear From You!</p>
+		</div>
+	</div>
+	
+	<div class = "popup" id = "projectsPopup">
+		<div class = "popupContent">
+			<span class = "close" onclick = "closePopup()">&times;</span>
+			<p class = "projectsPopupText">This Project Page is Under Construction. 
+			<br><br> Please Check Back Later!</p>
+		</div>
+	</div>
+	
 	<!--Slideshow-->
 	<div class = "slideshow">
 		<div class = "slide">
 			<img src = "../images/slideshow-image-1.2.jpg" class = "slideImage">
 			<div class= "text" id = "quotation">Developing Interest In Awesome</div>
-			<div class= "text" id = "callToDonate">Donate Today!</div>
+			<a href = "https://donorbox.org/rerootpontiac" class= "text" id = "callToDonate">Donate Today!</a>
 		</div>
 		<div class = "slide">
 			<img src = "../images/slideshow-image-2.2.jpg" class = "slideImage">
@@ -119,6 +163,7 @@
 			<span class = "dot" onclick = "currentSlide(4)"></span>
 		</div>
 	</div>
+	
 	<!--Project Carousel-->
 	<div class = "carousel">
 		<h1 id = "carouselTitle">Our Projects</h1>
@@ -133,10 +178,102 @@
 			<img src = "../images/carousel-orchards-2.jpg" class = "projectImage" id = "projectImage8">
 			<img src = "../images/carousel-willow.jpg" class = "projectImage" id = "projectImage9">
 		</div>
-		<button class = "carouselButton" id = "previousButton" onclick = "carouselSpin('-')">&#10094;</button>
-		<button class = "carouselButton" id = "nextButton" onclick = "carouselSpin('')">&#10095;</button>
+		<button class = "carouselButton" id = "previousButton" onclick = "carouselSpin(-1)">&#8631;</button>
+		<span class = "carouselLineSegment" id = "carouselLeftLineSegment1" onclick = "currentSlide(1)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselLeftLineSegment2" onclick = "currentSlide(2)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselLeftLineSegment3" onclick = "currentSlide(3)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselLeftLineSegment4" onclick = "currentSlide(4)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselCenterLineSegment" onclick = "currentSlide(5)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselRightLineSegment1" onclick = "currentSlide(6)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselRightLineSegment2" onclick = "currentSlide(7)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselRightLineSegment3" onclick = "currentSlide(8)">&#9473;</span>
+		<span class = "carouselLineSegment" id = "carouselRightLineSegment4" onclick = "currentSlide(9)">&#9473;</span>
+		<button class = "carouselButton" id = "nextButton" onclick = "carouselSpin(1)">&#8630;</button>
 	</div>
-	<img src = "../images/carousel-microgreens.jpg" style = "height: 50px; width: 50px; padding-top: 600px; position relative">
+	
+	<!--Events-->
+	<h1 id = "eventsTitle">Events</h1>
+	<img src = "../images/calendar.png" id = "eventsCalendar">
+	<div class = "events">
+		<img  src = "../images/carousel-biofiltration-2.jpg" class = "eventImage" id = "firstEvent">
+		<img src = "../images/carousel-chickens-2.jpg" class = "eventImage">
+		<img src = "../images/carousel-community-gardens-2.jpg" class = "eventImage">
+	</div>
+	
+	<!--Donation Box-->
+	<h1 id = "donationTitle">Donate Today!</h1>
+	<div class = "donationBox">
+		<div class = "donationInnerBoxes" id = "donationFirstBox">
+			<div class = "donationText">$5</div>
+		</div>
+		<div class = "donationInnerBoxes">
+			<div class = "donationText">$10</div>
+		</div>
+		<div class = "donationInnerBoxes">
+			<div class = "donationText">$15</div>
+		</div>
+		<div class = "donationInnerBoxes">
+			<div class = "donationText">$20</div>
+		</div>
+		<div class = "donationInnerBoxes" id = "donationLastBox">
+			<div class = "donationText" id = "donationLastBoxText">$</div>
+		</div>
+	</div>
+	<button id = "donationButton">Donate</button>
+	
+	<!--Sponsor Logos-->
+	<div class = "sponsorLogos">
+		<h1 class = "sponsorThankYou">A Huge Thank You to Our Sponsors</h1>
+		<img src = "../images/Logo-Ex-1.png" class = "sponsorLogo" id = "logo1">
+		<span class = "sponsorName">Sponsor Name 1</span>
+		<img src = "../images/Logo-Ex-2.png" class = "sponsorLogo" id = "logo2">
+		<span class = "sponsorName">Sponsor Name 2</span>
+		<img src = "../images/Logo-Ex-3.png" class = "sponsorLogo" id = "logo3">
+		<span class = "sponsorName">Sponsor Name 3</span>
+		<img src = "../images/Logo-Ex-4.png" class = "sponsorLogo" id = "logo4">
+		<span class = "sponsorName">Sponsor Name 4</span>
+		<br>
+		<img src = "../images/Logo-Ex-5.png" class = "sponsorLogo" id = "logo5">
+		<span class = "sponsorName">Sponsor Name 5</span>
+		<img src = "../images/Logo-Ex-6.png" class = "sponsorLogo" id = "logo6">
+		<span class = "sponsorName">Sponsor Name 6</span>
+	</div>
+	
+	<!--Footer-->
+	<footer>
+		<br>
+		<div id = "footerCredit">
+			<span id = "creditHeader">This Home Page was <br> Designed and Developed by</span> 
+			<br>
+			<br>
+			<span class = "creditParticipants">Abbey Benton &amp;</span>
+			<br><span class = "creditParticipants">Reroot Pontiac Volunteers</span>
+			<br><br><small id = "copyright">&copy; 2021 ReRoot Pontiac</small>
+		</div>
+		<div class = "footerContactInfo">
+			<h1 id = "findUsHeader">Find Us</h1>
+			<table id = "contactInfoTable">
+				<tr class = "footerContactHeaders">
+					<th class = "footerAddress">Address</th>
+					<th class = "footerEmail">Email</th>
+				</tr>
+				<tr>
+					<td class = "footerAddress">
+						<a href = "https://maps.google.com/?q=76 Henderson St Pontiac, MI 48341" style = "color: white">
+						76 Henderson St <br> Pontiac, MI 48341</a>
+					</td>
+					<td class = "footerEmail">
+						<a href = "mailto: info@rerootpontiac.org" style = "color: white">info@rerootpontiac.org</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<a href = "#logo" id = "toTopLink">Back To Top</a>
+		
+	</footer>
+	
+	<!--Javascript-->
+	<script src="popups.js"></script>
 	<script src="slideshow.js"></script>
 	<script src="carousel.js"></script>
 </body>
