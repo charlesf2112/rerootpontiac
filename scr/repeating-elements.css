@@ -96,6 +96,57 @@ a.dropdownLink{
 		display: block
 }
 
+.popup{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left:0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4)
+}
+
+.popupContent{
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 22%;
+	height: 28%;
+	text-align: center;
+	font-size: 28px
+}
+
+.contactPopupText{
+	margin-top: 77px
+}
+
+.email{
+	color: #F67F20;
+	text-decoration: underline
+}
+
+.projectsPopupText{
+	margin-top: 72px
+}
+
+.close{
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold
+}
+
+.close:hover, 
+.close:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer
+}
+
 #donateLink{
 	padding: 10px;
 	border: 4px;
@@ -106,4 +157,77 @@ a.dropdownLink{
 #donateLink:hover{
 	color: #FFFFFF;
 	background-color: #F67F20
+}
+
+.socialMedia{
+	top: -30px;
+	padding-right: 0
+}
+
+#facebook{
+	padding-left: 55px
+}
+
+#tiktok{
+	top: -23px;
+	left: 74px
+}
+
+#youtube{
+	left: 70px
+}
+
+#linkedin{
+	left: 71px
+}
+
+footer{
+	position: relative;
+	margin-top: 200px;
+	height: 240px;
+	background-color: #44261fff;
+	/*opacity: 0.9;*/
+	color: white;
+	font-family: Verdana
+}
+
+.footerContactInfo{
+	margin-left: 400px
+}
+
+#findUsHeader{
+	margin-bottom: 35px
+}
+
+#contactInfoTable{
+	text-align: left
+}
+
+.footerContactHeaders{
+	font-size: 25px
+}
+
+.footerEmail{
+	padding-left: 60px
+}
+
+#footerCredit{
+	float: right;
+	margin-right: 500px
+}
+
+#creditHeader{
+	font-size: 20px;
+	font-weight: bold
+}
+
+.creditParticipants{
+	font-family: Nunito;
+	font-size: 17px
+}
+
+#toTopLink{
+	margin-left: 1600px;
+	color: white;
+	text-decoration: underline
 }

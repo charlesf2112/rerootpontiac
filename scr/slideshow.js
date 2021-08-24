@@ -43,8 +43,8 @@ function showSlides() {
 	}
 	dots[slideIndex - 1].style.backgroundColor = "white";
 	
-	timer = setTimeout(function() {slideIndex++;showSlides();}, 5000); 
-}
+
+	timer = setTimeout(function() {slideIndex++; showSlides();}, 5000); =======
 
 /*called when clicking arrows*/
 function plusSlides(n) {
