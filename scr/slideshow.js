@@ -16,47 +16,58 @@ The easiest way to update the javascript title is to update the current version 
 Ex: title change from "slideshow-version2" to "slideshow-version3" 
 */
 
-var slideIndex = 1;
-showSlides(slideIndex);
+const carouselSlide = document.querySelector('.slideshow');
+const carouselImages = document.querySelectorAll('.slideshow img');
+const dots = document.querySelectorAll('.dot');
 
-function showSlides() {
-	var i;
-	var slides = document.getElementsByClassName("slide"); /*array of slides*/
-	var dots = document.getElementsByClassName("dot"); /*array of dots*/
-	
-	/*checks for looping slides*/
-	if (slideIndex > slides.length){slideIndex = 1}
-	if (slideIndex < 1) {slideIndex = slides.length}
-	
-	
-	/*hide all slides then show relevant slide*/
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
+let counter = 0;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+startTimer();
+
+function startTimer() {
+	timer = setTimeout(function() {	clearTimeout(timer);startTimer();plusSlides();}, 5000); 
+};
+
+function plusSlides() {
+	//check if next image exists else return to first image
+	if (counter > carouselImages.length - 2) {
+		counter = -1;
 	}
-	
-	if (slideIndex > slides.length) {slideIndex = 1;}
-	slides[slideIndex-1].style.display = "flex";
-	
-	/*make all dots transparent then make relevant dot white*/
-	for (i = 0; i < dots.length; i++) {
-		dots[i].style.backgroundColor = "rgba(218, 218, 218, 0.85)";
-	}
-	dots[slideIndex - 1].style.backgroundColor = "white";
-	
-
-	timer = setTimeout(function() {slideIndex++; showSlides();}, 5000); =======
-
-/*called when clicking arrows*/
-function plusSlides(n) {
-	clearTimeout(timer)
-	slideIndex += n
-	showSlides();
-}
-
-/*called when clicking dots*/
-function currentSlide(n) {
+	carouselSlide.style.transition = "transform 0.4s ease-in-out";
+	counter += 1;
+	carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 	clearTimeout(timer);
-	slideIndex = n
-	showSlides();
+	startTimer();
 }
+function prevSlides() {
+	//check if previous image exists else go to last image
+	if (counter < 1) {
+		counter = carouselImages.length;
+	}
 
+	carouselSlide.style.transition = "transform 0.4s ease-in-out";
+	counter -= 1;
+	carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+	clearTimeout(timer);
+	startTimer();
+}
+function currentSlide(n){
+	carouselSlide.style.transition = "transform 0.4s ease-in-out";
+	tcounter = n - 1;
+
+	//move forward or backward depending on where selected index is relative to current image index
+	if (tcounter > counter) {
+		counter = tcounter
+		carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+	}
+	if (tcounter < counter){
+		counter = tcounter
+		carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+	}
+	clearTimeout(timer);
+	startTimer();
+	
+}
